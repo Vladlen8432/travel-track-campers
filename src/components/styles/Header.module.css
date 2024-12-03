@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 3.33vh 4.4vw 3.33vh 4.4vw;
+  background-color: #f2f4f7;
+}
+
+.logo {
+  width: 9.44vw;
+  height: auto;
+}
+
+.nav {
+  margin-left: 31.25vw;
+}
+
+.list {
+  display: flex;
+  gap: 2.2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItem {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.link {
+  transition: color 0.3s ease;
+}
+
+.active {
+  color: #d84343;
+}
