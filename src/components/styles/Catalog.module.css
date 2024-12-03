@@ -1,62 +1,50 @@
 .containerCatalog {
   display: flex;
   gap: 4.4vw;
+  padding-top: 48px;
   padding-right: 4.4vw;
   padding-left: 4.4vw;
-  padding-top: 48px;
-  padding-bottom: 52px;
 }
 
-.containerFilter {
-  width: 360px;
+.location {
+  margin-bottom: 40px;
 }
 
-.containerContent {
-  width: 100%;
+.labelLocation {
+  color: #6c717b;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
-.listCamper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 32px;
+.inputLocation {
+  width: 25vw;
+  height: 56px;
+  padding-left: 1.4vw;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  outline: none;
 }
 
-.listItemCamper {
-  display: flex;
-  gap: 1.7vw;
-  padding: 1.7vw;
-  border: 1px solid #dadde1;
-  border-radius: 20px;
+.iconLocation {
+  width: 20px;
+  height: 20px;
+  color: black;
 }
 
-.imageCamper {
-  width: 292px;
-  height: 320px;
-  object-fit: cover;
+.labelFilters {
+  color: #475467;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
-.camperOverlay {
-  width: 100%;
-}
-
-.namePrice {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.priceFavorite {
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-}
-
-.camperDescription {
+.line {
+  border: 1px solid #d3d3d3;
+  margin-top: 24px;
   margin-bottom: 24px;
-}
-
-.featureContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6vw;
 }
