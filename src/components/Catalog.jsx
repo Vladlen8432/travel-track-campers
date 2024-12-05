@@ -1,13 +1,18 @@
 import css from "./styles/Catalog.module.css";
+import camper from "../images/temp/camper.jpg";
 
-import windIcon from "../images/catalog/wind.png";
-import transmission from "../images/catalog/diagram.png";
-import kitchen from "../images/catalog/cup-hot.png";
-import tv from "../images/catalog/tv.png";
-import bathroom from "../images/catalog/ph_shower.png";
-import camperType from "../images/catalog/bi_grid-1x2.png";
-import integration from "../images/catalog/bi_grid.png";
-import cove from "../images/catalog/bi_grid-3x3-gap.png";
+import {
+  windIcon,
+  transmission,
+  kitchen,
+  tv,
+  bathroom,
+  camperType,
+  integration,
+  cove,
+  heart,
+} from "../assets/index.js";
+import { NavLink } from "react-router-dom";
 
 const Catalog = () => {
   return (
@@ -119,58 +124,58 @@ const Catalog = () => {
         </form>
       </div>
 
-      <div className={css.mainContentCatalog}>Campers list</div>
+      <div className={css.mainContentCatalog}>
+        <ul className={css.listCatalog}>
+          <li className={css.listItemCatalog}>
+            <img
+              className="css.imgListCatalog"
+              src={camper}
+              alt="imgListCatalog"
+            />
+            <div className={css.contentListCatalog}>
+              <div className={css.containerTitlePrice}>
+                <h3 className={css.titleCamper}>Mavericks</h3>
+                <div className={css.containerPriceFavorite}>
+                  <p className={css.priceCamper}>€8000.00</p>
+                  <img className={css.heartImg} src={heart} alt="heart" />
+                </div>
+              </div>
+
+              <div className={css.containerReviewsLocation}>
+                <div className={css.containerReviews}>
+                  <img src="" alt="star" />
+                  <p className={css.reviewsItem}></p>
+                </div>
+
+                <div className={css.containerLocation}>
+                  <img src="" alt="map" />
+                  <p className={css.locationItem}>Kyiv, Ukraine</p>
+                </div>
+              </div>
+
+              <p className={css.descriptionItem}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+
+              <ul className={css.listFeatures}>
+                <li className={css.listFeaturesItem}>
+                  <img
+                    className={css.iconFeatures}
+                    src={transmission}
+                    alt="transmission"
+                  />
+                  <p>Automatic</p>
+                </li>
+              </ul>
+              <NavLink className={css.showMore} to={""}>
+                Show more
+              </NavLink>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
 
 export default Catalog;
-
-// import css from "./styles/Catalog.module.css";
-
-// const Catalog = () => {
-//   return (
-//     <div className={css.containerCatalog}>
-//       <div className={css.containerFilters}>
-//         <form className={css.filtersForm}>
-//           <div className={css.location}>
-//             <label className={css.labelLocation} htmlFor="location">
-//               Location
-//             </label>
-//             <br />
-//             <input
-//               className={css.inputLocation}
-//               type="text"
-//               value="Kyiv, Ukraine"
-//             />
-//           </div>
-
-//           <div className={css.filters}>
-//             <label className={css.labelFilters} htmlFor="filters">Filters</label>
-//             <h3 className={css.titleType}>Vehicle equipment</h3>
-//             <hr className={css.line} />
-
-//             <div className={css.checkboxGroup}>
-
-//             </div>
-
-//             <input type="checkbox" value='AC' />
-//             <input type="checkbox" />
-//             <input type="checkbox" />
-
-//             <h3 className={css.titleType}>Vehicle type</h3>
-
-//             <input type="checkbox" />
-//             <input type="checkbox" />
-//             <input type="checkbox" />
-//           </div>
-//           <button type="submit">Search</button>
-//         </form>
-//       </div>
-
-//       <div className={css.mainContentCatalog}>Campers list</div>
-//     </div>
-//   );
-// };
-
-// export default Catalog;

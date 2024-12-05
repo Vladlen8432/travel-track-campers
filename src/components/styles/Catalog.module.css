@@ -100,3 +100,116 @@
 .searchButton:hover {
   background-color: #d84343;
 }
+
+/* ______________________________________ */
+
+.mainContentCatalog {
+  width: 100%;
+}
+
+.listItemCatalog {
+  display: flex;
+  gap: 1.7vw;
+  border: 1px solid #d3d3d3;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.contentListCatalog {
+  width: 100%;
+}
+
+.containerTitlePrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleCamper {
+  color: #101828;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+
+.containerPriceFavorite {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.priceCamper {
+  color: #101828;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.heartImg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.containerReviewsLocation {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.containerLocation {
+  display: flex;
+  gap: 4px;
+}
+
+.locationItem {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.descriptionItem {
+  overflow: hidden;
+  color: #475467;
+  text-overflow: ellipsis;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.listFeatures {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listFeaturesItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #f2f4f7;
+  padding: 12px 18px;
+  border-radius: 100px;
+}
+
+.iconFeatures {
+  width: 24px;
+  height: 24px;
+}
+
+.showMore {
+  background-color: #e44848;
+  padding: 16px 40px;
+  border-radius: 200px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.showMore:hover {
+  background-color: #d84343;
+}

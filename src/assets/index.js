@@ -1,0 +1,9 @@
+export { default as windIcon } from "../images/catalog/wind.png";
+export { default as transmission } from "../images/catalog/diagram.png";
+export { default as kitchen } from "../images/catalog/cup-hot.png";
+export { default as tv } from "../images/catalog/tv.png";
+export { default as bathroom } from "../images/catalog/ph_shower.png";
+export { default as camperType } from "../images/catalog/bi_grid-1x2.png";
+export { default as integration } from "../images/catalog/bi_grid.png";
+export { default as cove } from "../images/catalog/bi_grid-3x3-gap.png";
+export { default as heart } from "../images/catalog/heart.png";
