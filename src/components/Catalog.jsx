@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import css from "./styles/Catalog.module.css";
-import camper from "../images/temp/camper.jpg";
+import { fetchCampers } from "../services/api";
 
 import {
   windIcon,
@@ -11,10 +12,24 @@ import {
   integration,
   cove,
   heart,
+  starYellow,
+  map,
 } from "../assets/index.js";
 import { NavLink } from "react-router-dom";
 
 const Catalog = () => {
+  const [campers, setCampers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchCampers().then((data) => {
+      setCampers(data);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+
   return (
     <div className={css.containerCatalog}>
       <div className={css.containerFilters}>
@@ -125,7 +140,81 @@ const Catalog = () => {
       </div>
 
       <div className={css.mainContentCatalog}>
-        <ul className={css.listCatalog}>
+        {campers.length > 0 ? (
+          <ul className={css.listCatalog}>
+            {campers.map((camper) => (
+              <li className={css.listItemCatalog} key={camper.id}>
+                <img
+                  className={css.imgListCatalog}
+                  src={camper.gallery[0].thumb}
+                  alt="imgListCatalog"
+                />
+                <div className={css.contentListCatalog}>
+                  <div className={css.containerTitlePrice}>
+                    <h3 className={css.titleCamper}>{camper.name}</h3>
+                    <div className={css.containerPriceFavorite}>
+                      <p className={css.priceCamper}>{camper.price}</p>
+                      <img className={css.heartImg} src={heart} />
+                    </div>
+                  </div>
+
+                  <div className={css.containerReviewsLocation}>
+                    <img
+                      className={css.starImgYellow}
+                      src={starYellow}
+                      alt="star"
+                    />
+                    <p>
+                      {camper.reviews.length > 0
+                        ? `${(
+                            camper.reviews.reduce(
+                              (sum, review) => sum + review.reviewer_rating,
+                              0
+                            ) / camper.reviews.length
+                          ).toFixed(1)} (${camper.reviews.length} Reviews)`
+                        : "No Reviews"}
+                    </p>
+                    <div className={css.containerLocation}>
+                      <img className={css.locationImg} src={map} alt="map" />
+                      <p className={css.locationItem}>{camper.location}</p>
+                    </div>
+                  </div>
+
+                  <p className={css.descriptionItem}>{camper.description}</p>
+
+                  <ul className={css.listFeatures}>
+                    {[
+                      { label: camper.transmission },
+                      { label: camper.engine },
+                      { label: "Air Conditioning", condition: camper.AC },
+                      { label: "Bathroom", condition: camper.bathroom },
+                      { label: "Kitchen", condition: camper.kitchen },
+                      { label: "TV", condition: camper.TV },
+                      { label: "Radio", condition: camper.radio },
+                      { label: "Refrigerator", condition: camper.refrigerator },
+                      { label: "Microwave", condition: camper.microwave },
+                      { label: "Gas", condition: camper.gas },
+                      { label: "Water", condition: camper.water },
+                    ]
+                      .filter(
+                        (item) => item.condition === undefined || item.condition
+                      )
+                      .map((item, index) => (
+                        <li key={index} className={css.listFeaturesItem}>
+                          <p className={css.featuresItem}>{item.label}</p>
+                        </li>
+                      ))}
+                  </ul>
+
+                  <NavLink className={css.showMore} to={""}>
+                    Show more
+                  </NavLink>
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+        {/* <ul className={css.listCatalog}>
           <li className={css.listItemCatalog}>
             <img
               className="css.imgListCatalog"
@@ -143,8 +232,8 @@ const Catalog = () => {
 
               <div className={css.containerReviewsLocation}>
                 <div className={css.containerReviews}>
-                  <img src="" alt="star" />
-                  <p className={css.reviewsItem}></p>
+                  <img className={css.starImgYellow} src={starYellow} alt="star" />
+                  <p className={css.reviewsItem}>(2 Reviews)</p>
                 </div>
 
                 <div className={css.containerLocation}>
@@ -172,7 +261,7 @@ const Catalog = () => {
               </NavLink>
             </div>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

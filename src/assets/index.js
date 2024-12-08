@@ -7,3 +7,6 @@ export { default as camperType } from "../images/catalog/bi_grid-1x2.png";
 export { default as integration } from "../images/catalog/bi_grid.png";
 export { default as cove } from "../images/catalog/bi_grid-3x3-gap.png";
 export { default as heart } from "../images/catalog/heart.png";
+export { default as starYellow } from "../images/catalog/star-yellow.png";
+export { default as map } from "../images/catalog/map.png";
+export { default as fuel } from "../images/catalog/fuel-pump.png";
