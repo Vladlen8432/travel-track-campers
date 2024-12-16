@@ -206,7 +206,7 @@ const Catalog = () => {
                       ))}
                   </ul>
 
-                  <NavLink className={css.showMore} to={""}>
+                  <NavLink className={css.showMore} to={"/campers/:id"}>
                     Show more
                   </NavLink>
                 </div>
@@ -214,54 +214,6 @@ const Catalog = () => {
             ))}
           </ul>
         ) : null}
-        {/* <ul className={css.listCatalog}>
-          <li className={css.listItemCatalog}>
-            <img
-              className="css.imgListCatalog"
-              src={camper}
-              alt="imgListCatalog"
-            />
-            <div className={css.contentListCatalog}>
-              <div className={css.containerTitlePrice}>
-                <h3 className={css.titleCamper}>Mavericks</h3>
-                <div className={css.containerPriceFavorite}>
-                  <p className={css.priceCamper}>€8000.00</p>
-                  <img className={css.heartImg} src={heart} alt="heart" />
-                </div>
-              </div>
-
-              <div className={css.containerReviewsLocation}>
-                <div className={css.containerReviews}>
-                  <img className={css.starImgYellow} src={starYellow} alt="star" />
-                  <p className={css.reviewsItem}>(2 Reviews)</p>
-                </div>
-
-                <div className={css.containerLocation}>
-                  <img src="" alt="map" />
-                  <p className={css.locationItem}>Kyiv, Ukraine</p>
-                </div>
-              </div>
-
-              <p className={css.descriptionItem}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-
-              <ul className={css.listFeatures}>
-                <li className={css.listFeaturesItem}>
-                  <img
-                    className={css.iconFeatures}
-                    src={transmission}
-                    alt="transmission"
-                  />
-                  <p>Automatic</p>
-                </li>
-              </ul>
-              <NavLink className={css.showMore} to={""}>
-                Show more
-              </NavLink>
-            </div>
-          </li>
-        </ul> */}
       </div>
     </div>
   );
