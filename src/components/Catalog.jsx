@@ -15,7 +15,7 @@ import {
   starYellow,
   map,
 } from "../assets/index.js";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Catalog = () => {
   const [campers, setCampers] = useState([]);
@@ -206,9 +206,9 @@ const Catalog = () => {
                       ))}
                   </ul>
 
-                  <NavLink className={css.showMore} to={"/campers/:id"}>
+                  <Link className={css.showMore} to={`/campers/${camper.id}`}>
                     Show more
-                  </NavLink>
+                  </Link>
                 </div>
               </li>
             ))}
