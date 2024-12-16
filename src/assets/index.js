@@ -10,3 +10,4 @@ export { default as heart } from "../images/catalog/heart.png";
 export { default as starYellow } from "../images/catalog/star-yellow.png";
 export { default as map } from "../images/catalog/map.png";
 export { default as fuel } from "../images/catalog/fuel-pump.png";
+export { default as location } from "../images/catalog/location.png";

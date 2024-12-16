@@ -1,0 +1,48 @@
+.camperDetails {
+  padding-right: 4.4vw;
+  padding-left: 4.4vw;
+  padding-top: 48px;
+}
+
+.camperTitle {
+  margin-bottom: 8px;
+}
+
+.containerRatingLocation {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.price {
+  margin-bottom: 28px;
+}
+
+.imageGalleryList {
+  display: flex;
+  gap: 40px;
+}
+
+.imgGallery {
+  width: 292px;
+  height: 312px;
+  object-fit: cover;
+  border-radius: 10px;
+}
