@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { NavLink, Outlet, useParams } from "react-router-dom";
 import { fetchCamperById } from "../services/api";
 import { useEffect, useState } from "react";
 import css from "./styles/CamperDetails.module.css";
@@ -59,6 +59,19 @@ const CamperDetails = () => {
           ))}
         </ul>
       )}
+
+      <p className={css.description}>{camper.description}</p>
+
+      <ul className={css.listFeaturesReviewsNav}>
+        <li className={css.listFeaturesReviewsNavItem}>
+          <NavLink to={`/campers/${params.id}/features`}>Features</NavLink>
+        </li>
+
+        <li className={css.listFeaturesReviewsNavItem}>
+          <NavLink to={`/campers/${params.id}/reviews`}>Reviews</NavLink>
+        </li>
+      </ul>
+      <Outlet />
     </div>
   );
 };
